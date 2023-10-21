@@ -10,6 +10,11 @@ class MainActivity : AppCompatActivity() {
         var viewBind = ActivityMainBinding.inflate(layoutInflater,null,false)
         setContentView(viewBind.root)
 
+        viewBind.okBtn.setOnClickListener {
+            val inputContent = viewBind.contentEdt.text.toString()
+
+            viewBind.resultRst.text = inputContent
+        }
 
     }
 }
